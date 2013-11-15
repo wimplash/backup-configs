@@ -8,11 +8,17 @@ set relativenumber
 set ruler
 set laststatus=2
 
-set guifont=Source_Code_Pro:h8:cDEFAULT
+if has("gui_running")
+  set guifont=Source_Code_Pro:h8:cDEFAULT
+endif
 
 syntax on
 filetype off
-set rtp+=~/vimfiles/bundle/vundle/
+if has("win32") || has("win16")
+  set rtp+=~/vimfiles/bundle/vundle/
+else
+  set rtp+=~/.vim/bundle/vundle/
+endif
 call vundle#rc()
 
 " Plug-in management
@@ -32,9 +38,11 @@ nnoremap <leader>B :BuffergatorClose<CR>
 
 Bundle 'JavaScript-syntax'
 
-Bundle 'altercation/vim-colors-solarized'
-set background=dark
-colorscheme solarized
+if has("gui_running")
+  Bundle 'altercation/vim-colors-solarized'
+  set background=dark
+  colorscheme solarized
+endif
 
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -108,4 +116,6 @@ nmap <up>    :3wincmd +<cr>
 nmap <down>  :3wincmd -<cr>
 
 cd ~
-autocmd GUIEnter * simalt ~x
+if has("win32") || has("win16")
+  autocmd GUIEnter * simalt ~x
+endif
