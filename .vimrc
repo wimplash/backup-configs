@@ -19,7 +19,6 @@ if has("win32") || has("win16")
 else
   set rtp+=~/.vim/bundle/vundle/
 endif
-set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Plug-in management
@@ -28,46 +27,31 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'JavaScript-syntax'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 
+Bundle 'JavaScript-syntax'
 filetype plugin indent on
-" ---vundle END---
 
-" ---vundle plug-ins---
 " setup for 'scrooloose/nerdtree'
 map <Leader>n :NERDTreeToggle<CR>
+
 " setup for 'majutsushi/tagbar'
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>T :TagbarToggle<CR>
+
 " setup for 'jeetsukumaran/vim-buffergator'
 let g:buffergator_suppress_keymaps=1
 nnoremap <leader>b :BuffergatorOpen<CR>
 nnoremap <leader>B :BuffergatorClose<CR>
-
-Bundle 'JavaScript-syntax'
 
 if has("gui_running")
   Bundle 'altercation/vim-colors-solarized'
   set background=dark
   colorscheme solarized
 endif
-" setup for 'altercation/vim-colors-solarized'
-set background=dark
-colorscheme solarized
-" ---vundle plug-ins END---
-
-"show whitespace characters
-set list listchars=tab:»\ ,trail:·,eol:¶,nbsp:·
-
-" makes the gutter show numbering relative to the current line.
-set relativenumber
-set ruler
-set laststatus=2
-
-set guifont=Source_Code_Pro:h8:cDEFAULT
+" ---vundle END---
 
 syntax on
 filetype on
@@ -140,4 +124,3 @@ cd ~
 if has("win32") || has("win16")
   autocmd GUIEnter * simalt ~x
 endif
-"autocmd GUIEnter * simalt ~x
