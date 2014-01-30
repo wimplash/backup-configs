@@ -31,7 +31,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 
-Bundle 'JavaScript-syntax'
 filetype plugin indent on
 
 " setup for 'scrooloose/nerdtree'
