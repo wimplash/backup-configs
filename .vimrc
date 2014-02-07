@@ -30,6 +30,7 @@ Bundle 'JavaScript-syntax'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
+Bundle 'wellle/targets.vim'
 
 filetype plugin indent on
 
