@@ -17,6 +17,8 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups
 
+export SVN_EDITOR="vim"
+
 #ssh without pass-phrase
 if [ -f ~/.agent.env ] ; then
     . ~/.agent.env > /dev/null
