@@ -1,7 +1,7 @@
 set nocompatible
 
 "show whitespace characters
-set list listchars=tab:»\ ,trail:·,eol:¶,nbsp:·
+set list listchars=tab:ï¿½\ ,trail:ï¿½,eol:ï¿½,nbsp:ï¿½
 
 " makes the gutter show numbering relative to the current line.
 set relativenumber
@@ -31,6 +31,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 Bundle 'wellle/targets.vim'
+Bundle 'godlygeek/tabular'
 
 filetype plugin indent on
 
