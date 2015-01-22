@@ -15,23 +15,28 @@ endif
 syntax on
 filetype off
 if has("win32") || has("win16")
-  set rtp+=~/vimfiles/bundle/vundle/
+  set rtp+=~/vimfiles/bundle/Vundle.vim
 else
-  set rtp+=~/.vim/bundle/vundle/
+  set rtp+=~/.vim/bundle/Vundle.vim
 endif
-call vundle#rc()
+call vundle#begin()
 
 " Plug-in management
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'JavaScript-syntax'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-ragtag'
-Bundle 'wellle/targets.vim'
-Bundle 'godlygeek/tabular'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'JavaScript-syntax'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-ragtag'
+Plugin 'wellle/targets.vim'
+Plugin 'godlygeek/tabular'
+if has("gui_running")
+  Plugin 'altercation/vim-colors-solarized'
+endif
+call vundle#end()
+" ---vundle END---
 
 filetype plugin indent on
 
@@ -48,11 +53,9 @@ nnoremap <leader>b :BuffergatorOpen<CR>
 nnoremap <leader>B :BuffergatorClose<CR>
 
 if has("gui_running")
-  Bundle 'altercation/vim-colors-solarized'
   set background=dark
   colorscheme solarized
 endif
-" ---vundle END---
 
 syntax on
 filetype on
