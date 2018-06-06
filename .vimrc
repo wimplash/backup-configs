@@ -1,7 +1,7 @@
 set nocompatible
 
 "show whitespace characters
-set list listchars=tab:»\ ,trail:.,eol:¶,nbsp:·
+set list listchars=tab:Â»\ ,trail:.,eol:Â¶,nbsp:Â·
 
 " makes the gutter show numbering relative to the current line.
 set relativenumber
@@ -9,7 +9,7 @@ set ruler
 set laststatus=2
 
 if has("gui_running")
-  set guifont=Source_Code_Pro:h8:cDEFAULT
+  set guifont=Source_Code_Variable:h8:cDEFAULT
 endif
 
 syntax on
