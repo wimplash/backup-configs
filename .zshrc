@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+autoload -U zmv
 #completion
 autoload -U compinit
 compinit
